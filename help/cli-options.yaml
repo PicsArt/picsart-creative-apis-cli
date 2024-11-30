@@ -1,0 +1,52 @@
+description: 'CLI tool to remove background and upscale images using Picsart API'
+version: '1.0.0'
+
+helpOption:
+  flags: '-h, --help'
+  description: 'Display help for the image-processor CLI tool'
+
+commands:
+  removebg:
+    description: 'Remove the background from an image'
+    options:
+      input:
+        flags: '-i, --input <file>'
+        description: 'Specify the input image file'
+      output:
+        flags: '-o, --output <file>'
+        description: 'Specify the output file to save the processed image'
+      backgroundColor: 
+        flags: '-c, --bg-color <color>'
+        description: 'Specify background color (hex code or color name)'
+      apikey: 
+        flags: '-k, --apikey <apikey>'
+        description: 'Picsart API key for authentication'
+  upscale:
+    description: 'Upscale an image to higher resolution'
+    options:
+      input:
+        flags: '-i, --input <file>'
+        description: 'Specify the input image file'
+      output:
+        flags: '-o, --output <file>'
+        description: 'Specify the output file to save the upscaled image'
+      zoom: 
+        flags: '-z, --zoom <times>'
+        description: 'Scale zoom size (e.g., 2x)'
+      apikey: 
+        flags: '-k, --apikey <apikey>'
+        description: 'Picsart API key for authentication'
+  save:
+    description: 'Save your Picsart API key for future use'
+    options:
+      key:
+        flags: '-k, --apikey <apikey>'
+        description: 'Specify the API key to save'
+  credit:
+    description: 'Fetch the current credit balance from the Picsart API'
+    options:
+      key: 
+        flags: '-k, --apikey <apikey>'
+        description: 'Specify the API key to save'
+  remove: 
+    description: 'Remove saved API key'
