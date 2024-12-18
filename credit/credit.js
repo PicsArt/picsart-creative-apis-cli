@@ -19,7 +19,7 @@ const createCreditCommand = (cliOptions) => {
         const response = await axios.get('https://api.picsart.io/tools/1.0/balance', {
           headers: {
             'X-Picsart-API-Key': apiKey,
-            'User-Agent': 'cli'
+            'X-Picsart-Plugin': 'Cli'
           },
         });
 
