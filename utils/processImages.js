@@ -44,6 +44,7 @@ const processImages = async (inputFiles, outputDir, suffix, apiKey, url, upscale
         headers: {
           ...form.getHeaders(),
           'X-Picsart-API-Key': apiKey,
+          'X-Picsart-Plugin': 'Cli'
         },
       });
 
